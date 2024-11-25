@@ -34,11 +34,11 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                     <div class="card card-outline card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Productos registrados</h3>
-                            <div class="card-tools">
+<!--                            <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                 </button>
                             </div>
-
+-->
                         </div>
 
                         <div class="card-body" style="display: block;">
@@ -46,17 +46,16 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                                <table id="example1" class="table table-bordered table-striped table-sm">
                                    <thead>
                                    <tr>
-                                       <th><center>Nro</center></th>
                                        <th><center>Código</center></th>
                                        <th><center>Categoría</center></th>
                                        <th><center>Imagen</center></th>
                                        <th><center>Nombre</center></th>
                                        <th><center>Descripción</center></th>
+                                       <th><center>Marca</center></th>
                                        <th><center>Stock</center></th>
                                        <th><center>Precio compra</center></th>
                                        <th><center>Precio venta</center></th>
                                        <th><center>Fecha compra</center></th>
-                                       <th><center>Usuario</center></th>
                                        <th><center>Acciones</center></th>
                                    </tr>
                                    </thead>
@@ -66,14 +65,14 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                                    foreach ($productos_datos as $productos_dato){
                                        $id_producto = $productos_dato['id_producto']; ?>
                                        <tr>
-                                           <td><?php echo $contador = $contador + 1; ?></td>
                                            <td><?php echo $productos_dato['codigo'];?></td>
-                                           <td><?php echo $productos_dato['categoria'];?></td>
                                            <td>
-                                               <img src="<?php echo $URL."/almacen/img_productos/".$productos_dato['imagen'];?>" width="50px" alt="asdf">
-                                           </td>
+                                               <img src="<?php echo $URL."/almacen/img_productos/".$productos_dato['imagen'];?>" width="50px" height="50px" alt="asdf">
+                                            </td>
+                                            <td><?php echo $productos_dato['categoria'];?></td>
                                            <td><?php echo $productos_dato['nombre'];?></td>
                                            <td><?php echo $productos_dato['descripcion'];?></td>
+                                           <td><?php echo $productos_dato['marca'];?></td>
                                            <?php
                                            $stock_actual = $productos_dato['stock'];
                                            $stock_maximo = $productos_dato['stock_maximo'];
@@ -94,7 +93,6 @@ include ('../app/controllers/almacen/listado_de_productos.php');
                                            <td><?php echo $productos_dato['precio_compra'];?></td>
                                            <td><?php echo $productos_dato['precio_venta'];?></td>
                                            <td><?php echo $productos_dato['fecha_ingreso'];?></td>
-                                           <td><?php echo $productos_dato['email'];?></td>
                                            <td>
                                                <center>
                                                    <div class="btn-group">

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../public/images/logo.ico">
     <title>Sistema de ventas</title>
 
     <!-- Google Font: Source Sans Pro -->
@@ -28,7 +29,7 @@
         $respuesta = $_SESSION['mensaje']; ?>
         <script>
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'error',
                 title: '<?php echo $respuesta;?>',
                 showConfirmButton: false,
@@ -39,14 +40,9 @@
     }
     ?>
 
-    <center>
-        <img src="https://img.freepik.com/vector-gratis/gerentes-startups-que-presentan-analizan-tabla-crecimiento-ventas-grupo-trabajadores-monton-dinero-efectivo-cohetes-diagramas-barras-flecha-monton-dinero_74855-14166.jpg?w=996&t=st=1673983349~exp=1673983949~hmac=b50c9a1d93c8d39cec56f10df254278c5ab4acba8fb0c9a52e31eede2ebf03bc"
-             alt="" width="300px">
-    </center>
-    <br>
     <div class="card card-outline card-primary">
         <div class="card-header text-center">
-            <a href="../public/templeates/AdminLTE-3.2.0/index2.html" class="h1"><b>Sistema de </b>VENTAS</a>
+            <p class="h1"><img src="..\public\images\logo.png" alt="" width="90px"><b>Sistema de VENTAS</p>
         </div>
         <div class="card-body">
             <p class="login-box-msg">Ingrese sus datos</p>

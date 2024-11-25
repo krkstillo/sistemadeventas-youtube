@@ -1,14 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: HILARIWEB
- * Date: 17/1/2023
- * Time: 13:00
- */
+
 define('SERVIDOR','localhost');
 define('USUARIO','root');
 define('PASSWORD','');
-define('BD','sistemadeventas');
+define('BD','sisventas');
 
 $servidor = "mysql:dbname=".BD.";host=".SERVIDOR;
 
@@ -20,9 +15,23 @@ try{
     echo "Error al conectar a la base de datos";
 }
 
-$URL = "http://localhost/www.sistemadeventas.com";
+$URL = "http://localhost/sisventas";
 
-date_default_timezone_set("America/Caracas");
+date_default_timezone_set("America/El_Salvador");
 $fechaHora = date('Y-m-d H:i:s');
 
+//if (isset($_SESSION['mensaje'])) {
+//    $respuesta = $_SESSION['mensaje']; ?>
+<!--    <script>
+            Swal.fire({
+                position: 'center',
+                icon: 'error',
+                title: '<?php echo $respuesta;?>',
+                showConfirmButton: false,
+                timer: 2000
+            })
+    </script>
+<?php
+    //unset($_SESSION['mensaje']);
+//}
 

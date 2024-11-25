@@ -130,10 +130,6 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
                     </div>
                 </div>
 
-
-
-
-
                 <div class="col-lg-3 col-6">
                     <div class="small-box bg-dark">
                         <div class="inner">
@@ -168,11 +164,5 @@ include ('app/controllers/proveedores/listado_de_proveedores.php');
 </div>
 <!-- /.content-wrapper -->
 
-<?php include ('layout/parte2.php'); ?>
-
-
-
-
-
-
-
+<?php include ('layout/parte2.php'); 
+?>

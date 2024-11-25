@@ -34,11 +34,11 @@ include ('../app/controllers/roles/listado_de_roles.php');
                     <div class="card card-outline card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Roles registrado</h3>
-                            <div class="card-tools">
+<!--                            <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                 </button>
                             </div>
-
+-->
                         </div>
 
                         <div class="card-body" style="display: block;">
@@ -98,56 +98,30 @@ include ('../app/controllers/roles/listado_de_roles.php');
 
 
 <script>
-    $(function () {
-        $("#example1").DataTable({
-            "pageLength": 5,
-            "language": {
-                "emptyTable": "No hay información",
-                "info": "Mostrando _START_ a _END_ de _TOTAL_ Roles",
-                "infoEmpty": "Mostrando 0 a 0 de 0 Roles",
-                "infoFiltered": "(Filtrado de _MAX_ total Roles)",
-                "infoPostFix": "",
-                "thousands": ",",
-                "lengthMenu": "Mostrar _MENU_ Roles",
-                "loadingRecords": "Cargando...",
-                "processing": "Procesando...",
-                "search": "Buscador:",
-                "zeroRecords": "Sin resultados encontrados",
-                "paginate": {
-                    "first": "Primero",
-                    "last": "Ultimo",
-                    "next": "Siguiente",
-                    "previous": "Anterior"
+    $("#example1").DataTable({
+        "pagingType": "simple_numbers",
+        "lengthMenu": [ 5, 10, 25 ],    
+        "language": {
+                processing:     "Procesando...",
+                search:         "Buscar:",
+                lengthMenu:    "Mostrar _MENU_ registros",
+                info:           "Mostrando _START_ a _END_ de _TOTAL_ registros",
+                infoEmpty:      "Mostrando registros del 0 al 0 de un total de 0 registros",
+                infoFiltered:   "(filtrado de un total de _MAX_ registros)",
+                infoPostFix:    "",
+                loadingRecords: "Cargando...",
+                zeroRecords:    "No se encontraron resultados",
+                emptyTable:     "Ningún dato disponible en esta tabla",
+                paginate: {
+                    first:      "Primero",
+                    previous:   "Anterior",
+                    next:       "Siguiente",
+                    last:       "Último"
+                },
+                aria: {
+                    sortAscending:  ": Activar para ordenar la columna de manera ascendente",
+                    sortDescending: ": Activar para ordenar la columna de manera descendente"
                 }
-            },
-            "responsive": true, "lengthChange": true, "autoWidth": false,
-            buttons: [{
-                extend: 'collection',
-                text: 'Reportes',
-                orientation: 'landscape',
-                buttons: [{
-                    text: 'Copiar',
-                    extend: 'copy',
-                }, {
-                    extend: 'pdf'
-                },{
-                    extend: 'csv'
-                },{
-                    extend: 'excel'
-                },{
-                    text: 'Imprimir',
-                    extend: 'print'
-                }
-                ]
-            },
-                {
-                    extend: 'colvis',
-                    text: 'Visor de columnas',
-                    collectionLayout: 'fixed three-column'
-                }
-            ],
-        }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
-    });
-</script>
-
+            }
+        });
 </script>

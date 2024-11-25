@@ -7,12 +7,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="<?php echo $URL;?>../public/images/logo.ico">
     <title>Sistema de ventas</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="<?php echo $URL;?>\layout\fontawesome\css\all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/dist/css/adminlte.min.css">
 
@@ -20,12 +21,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- DataTables -->
-    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
-    <link rel="stylesheet" href="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+    <link rel="stylesheet" href="<?php echo $URL;?>\layout\css\bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo $URL;?>\layout\css\dataTables.bootstrap5.min.css">
 
     <!-- jQuery -->
-    <script src="<?php echo $URL;?>/public/templeates/AdminLTE-3.2.0/plugins/jquery/jquery.min.js"></script>
+    <script src="<?php echo $URL;?>\layout\js\jquery-3.5.1.js"></script>
 
 </head>
 <body class="hold-transition sidebar-mini">
@@ -82,40 +82,42 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <!-- Add icons to the links using the .nav-icon class
                          with font-awesome or any other icon font library -->
 
-
-
-
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-users"></i>
+                            </i> <i class="fa fa-key" aria-hidden="true"></i>
                             <p>
-                                Usuarios
-                                <i class="right fas fa-angle-left"></i>
+                                Accesos
+                                <i class="right fas fa-angle-left"></i> 
                             </p>
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/usuarios" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de usuarios</p>
+                                    <i class="nav-icon fas fa-users"></i>
+                                    <p>Usuarios</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/usuarios/create.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Creación de usuario</p>
+                                    <p>Crear Usuario</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/roles" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Roles</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/roles/create.php" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Crear Rol</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
-
-
-
-
-
-
-                    <li class="nav-item ">
+                <!--   <li class="nav-item ">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-address-card"></i>
                             <p>
@@ -137,35 +139,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </a>
                             </li>
                         </ul>
-                    </li>
-
-
-
-
-
-                    <li class="nav-item ">
-                        <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-tags"></i>
-                            <p>
-                                Categorías
-                                <i class="right fas fa-angle-left"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            <li class="nav-item">
-                                <a href="<?php echo $URL;?>/categorias" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de categorías</p>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-
-
-
+                    </li> -->
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fas fa-list"></i>
@@ -176,22 +150,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
+                                <a href="<?php echo $URL;?>/categorias" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Categorías</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?php echo $URL;?>/almacen" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de productos</p>
+                                    <p>Productos</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/almacen/create.php" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Creación de productos</p>
+                                    <p>Crear Producto</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
-
-
 
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
@@ -203,28 +180,30 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
+                                <a href="<?php echo $URL;?>/proveedores" class="nav-link">
+                                <i class="fa fa-address-card"></i>
+                                <p>Proveedores</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="<?php echo $URL;?>/compras" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de compras</p>
+                                <i class="fa fa-list-alt"></i>
+                                    <p>Compras</p>
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/compras/create.php" class="nav-link">
-                                    <i class="far fa-circle nav-icon"></i>
-                                    <p>Creación de compra</p>
+                                <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                    <p>Crear compra</p>
                                 </a>
                             </li>
                         </ul>
                     </li>
-
-
-
-
                     <li class="nav-item ">
                         <a href="#" class="nav-link active">
-                            <i class="nav-icon fas fa-car"></i>
+                            <i class="nav-icon fas fa-chart-line"></i>
                             <p>
-                                Proveedores
+                                Ventas
                                 <i class="right fas fa-angle-left"></i>
                             </p>
                         </a>
@@ -232,18 +211,54 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             <li class="nav-item">
                                 <a href="<?php echo $URL;?>/proveedores" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Listado de proveedores</p>
+                                    <p>Clientes</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/compras" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Ventas</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/compras/create.php" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Devoluciones</p>
                                 </a>
                             </li>
                         </ul>
-                    </li>
-
-
-
-
-
+                    </li>      
+                    <li class="nav-item ">
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fa fa-search" aria-hidden="true"></i>
+                            <p>
+                                Consultas
+                                <i class="right fas fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/proveedores" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Compras por Fecha</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/compras" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Ventas por Fechas</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $URL;?>/compras/create.php" class="nav-link">
+                                    <i class="far fa-circle nav-icon"></i>
+                                    <p>Proveedores</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>                                  
                     <li class="nav-item">
-                        <a href="<?php echo $URL;?>/app/controllers/login/cerrar_sesion.php" class="nav-link" style="background-color: #ca0a0b">
+                        <a href="<?php echo $URL;?>/app/controllers/login/cerrar_sesion.php" class="nav-link bg-danger">
                             <i class="nav-icon fas fa-door-closed"></i>
                             <p>
                                 Cerrar Sesión

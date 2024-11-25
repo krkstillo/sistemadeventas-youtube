@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: HILARIWEB
- * Date: 20/1/2023
- * Time: 08:51
- */
 
 
 include ('../../config.php');
@@ -27,7 +21,7 @@ if($password_user == ""){
     WHERE id_usuario = :id_usuario ");
 
         $sentencia->bindParam('nombres',$nombres);
-        $sentencia->bindParam('email',$email);
+        $sentencia->bindParam('email',$email);      
         $sentencia->bindParam('id_rol',$rol);
         $sentencia->bindParam('fyh_actualizacion',$fechaHora);
         $sentencia->bindParam('id_usuario',$id_usuario);

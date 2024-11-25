@@ -1,11 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: HILARIWEB
- * Date: 19/1/2023
- * Time: 22:11
- */
-
+ 
 $id_usuario_get = $_GET['id'];
 
 $sql_usuarios = "SELECT us.id_usuario as id_usuario, us.nombres as nombres, us.email as email, rol.rol as rol 

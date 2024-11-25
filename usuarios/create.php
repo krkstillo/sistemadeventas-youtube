@@ -32,11 +32,11 @@ include ('../app/controllers/roles/listado_de_roles.php');
                     <div class="card card-primary">
                         <div class="card-header">
                             <h3 class="card-title">Llene los datos con cuidado</h3>
-                            <div class="card-tools">
+<!--                            <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
                                 </button>
                             </div>
-
+-->
                         </div>
 
                         <div class="card-body" style="display: block;">
@@ -65,11 +65,11 @@ include ('../app/controllers/roles/listado_de_roles.php');
                                         </div>
                                         <div class="form-group">
                                             <label for="">Contraseña</label>
-                                            <input type="text" name="password_user" class="form-control" required>
+                                            <input type="password" name="password_user" class="form-control" required>
                                         </div>
                                         <div class="form-group">
                                             <label for="">Repita la Contraseña</label>
-                                            <input type="text" name="password_repeat" class="form-control" required>
+                                            <input type="password" name="password_repeat" class="form-control" required>
                                         </div>
                                         <hr>
                                         <div class="form-group">
